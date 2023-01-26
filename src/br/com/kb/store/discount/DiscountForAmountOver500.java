@@ -2,7 +2,7 @@ package br.com.kb.store.discount;
 
 import java.math.BigDecimal;
 
-import br.com.kb.store.Budget;
+import br.com.kb.store.budget.Budget;
 
 public class DiscountForAmountOver500 extends Discount {
     public DiscountForAmountOver500(Discount next) {

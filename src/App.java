@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 
-import br.com.kb.store.Budget;
+import br.com.kb.store.budget.Budget;
 import br.com.kb.store.discount.DiscountCalculator;
 import br.com.kb.store.tax.ICMS;
 import br.com.kb.store.tax.ICSS;
