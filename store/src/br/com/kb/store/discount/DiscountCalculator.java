@@ -6,13 +6,9 @@ import br.com.kb.store.Budget;
 
 public class DiscountCalculator {
     public BigDecimal calculate(Budget budget) {
-        if (budget.getQuantityItems() > 5) {
-            return budget.getAmount().multiply(new BigDecimal("0.1"));
-        }
-        if (budget.getAmount().compareTo(new BigDecimal("500")) > 0) {
-            return budget.getAmount().multiply(new BigDecimal("0.1"));
-        }
+        Discount discount = new DiscountForMoreThan5Items(new DiscountForAmountOver500(new WithoutDiscount()));
 
-        return BigDecimal.ZERO;
+        return discount.calculate(budget);
+
     }
 }
