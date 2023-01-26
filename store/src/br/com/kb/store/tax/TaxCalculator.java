@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 
 import br.com.kb.store.Budget;
 
-public class CalculateTax {
+public class TaxCalculator {
     public BigDecimal calculate(Budget budget, Tax tax) {
         return tax.calculate(budget);
     }
