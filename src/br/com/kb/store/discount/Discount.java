@@ -11,6 +11,16 @@ public abstract class Discount {
         this.next = next;
     }
 
-    public abstract BigDecimal calculate(Budget budget);
+    public BigDecimal calculate(Budget budget) {
+        if (isShouldApply(budget)) {
+            return doCalculation(budget);
+        } else {
+            return next.calculate(budget);
+        }
+    }
+
+    protected abstract BigDecimal doCalculation(Budget budget);
+
+    protected abstract boolean isShouldApply(Budget budget);
 
 }
