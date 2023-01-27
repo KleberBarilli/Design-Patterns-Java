@@ -2,6 +2,7 @@ package br.com.kb.store.budget;
 
 import java.math.BigDecimal;
 
+import br.com.kb.store.budget.situation.Done;
 import br.com.kb.store.budget.situation.Situation;
 import br.com.kb.store.budget.situation.UnderReview;
 
@@ -49,6 +50,10 @@ public class Budget {
 
     public void done() {
         this.situation.done(this);
+    }
+
+    public boolean isDone() {
+        return situation instanceof Done;
     }
 
 }
