@@ -19,7 +19,7 @@ public class MakeOrderHandler {
 
         Order order = new Order(data.getCustomer(), LocalDateTime.now(), budget);
 
-        actions.forEach(a -> a.execute(order));
+        this.actions.forEach(a -> a.execute(order));
 
     }
 }
